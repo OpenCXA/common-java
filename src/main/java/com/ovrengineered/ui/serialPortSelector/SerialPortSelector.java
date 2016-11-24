@@ -8,9 +8,9 @@ import gnu.io.UnsupportedCommOperationException;
 import javax.swing.JPanel;
 
 import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.factories.FormFactory;
 
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -50,15 +50,15 @@ public class SerialPortSelector extends JPanel
 	public SerialPortSelector() {
 		setBorder(new TitledBorder(null, "Serial Port Configuration:", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		setLayout(new FormLayout(new ColumnSpec[] {
-				FormFactory.RELATED_GAP_COLSPEC,
+				FormSpecs.RELATED_GAP_COLSPEC,
 				ColumnSpec.decode("default:grow"),
-				FormFactory.RELATED_GAP_COLSPEC,
+				FormSpecs.RELATED_GAP_COLSPEC,
 				ColumnSpec.decode("default:grow"),
-				FormFactory.RELATED_GAP_COLSPEC,
-				FormFactory.DEFAULT_COLSPEC,},
+				FormSpecs.RELATED_GAP_COLSPEC,
+				FormSpecs.DEFAULT_COLSPEC,},
 			new RowSpec[] {
-				FormFactory.RELATED_GAP_ROWSPEC,
-				FormFactory.DEFAULT_ROWSPEC,}));
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				FormSpecs.DEFAULT_ROWSPEC,}));
 		
 		serialPortDropdown = new SerialPortDropdown();
 		add(serialPortDropdown, "2, 2, fill, default");
